@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+          const url = "../json/tourist.json";   
+          $.getJSON(url, (data) => {
+            for (let i=0; i<data.length; i++){
+                console.log(`観光地名=${data[i].観光地名}, 緯度=${data[i].緯度}, 経度=${data[i].経度}, 住所=${data[i].住所}, 電話番号=${data[i].電話番号}, 観光地説明=${data[i].観光地説明}, 観光地画像=${data[i].観光地画像}, パズル画像=${data[i].パズル画像}`);
+               
+            }
+          });
+    </script>
+</html>
